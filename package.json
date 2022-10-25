@@ -1,0 +1,9 @@
+{  "scripts": {
+  "start": "node index",
+  "watch": "nodemon index",
+  "test": "jest"
+},
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}
