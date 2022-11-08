@@ -1,7 +1,7 @@
 const Employee = require('../lib/Employee')
 //require our class Eeployee
 describe('Employee', () => {
-    const testEmployee = new Employee(`Bee`, 1, `ben@goat.net`)
+    const testEmployee = new Employee(`Bee`, 1, `ben@bee.bee`)
     it(`Instantiates as a class object`,()=>{
 expect(typeof(testEmployee)).toBe(`object`);
 })
