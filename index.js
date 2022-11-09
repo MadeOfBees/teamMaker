@@ -45,7 +45,7 @@ function formEng() {
         <h3 class="card-title">${eInput[i].name}</h3>
         <li class="card-text">Engineer</li>
         <li class="card-text">${eInput[i].id}</li>
-        <li class="card-text"><a href = "${eInput[i].email}">Send Email</a></li>
+        <li class="card-text"><a href = "mailto: ${eInput[i].email}">${eInput[i].email}</a></li>
         <li class="card-text"><a href="url">https://github.com/${eInput[i].github}</a></li>
         </div>
         `
@@ -66,7 +66,7 @@ function formInt() {
         <h3 class="card-title">${iInput[i].name}</h3>
         <li class="card-text">Intern</li>
         <li class="card-text">${iInput[i].id}</li>
-        <li class="card-text"><a href = "${iInput[i].email}">Send Email</a></li>
+        <li class="card-text"><a href = "mailto: ${iInput[i].email}">${iInput[i].email}</a></li>
         <li class="card-text">${iInput[i].school}</li>
         </div>
         `
@@ -83,8 +83,6 @@ function formInt() {
 async function write() {
     formEng()
     formInt()
-    console.log(globFinalEng)
-    console.log(globFinalInt)
     writeToFile(
         `<!DOCTYPE html>
         <html lang="en">
@@ -101,7 +99,7 @@ async function write() {
                     <h3 class="card-title">${mInput.name}</h3>
                     <li class="card-text">Manager</li>
                     <li class="card-text">${mInput.id}</li>
-                    <li class="card-text"><a href = "${mInput.email}">Send Email</a></li>
+                    <li class="card-text"><a href = "mailto: ${mInput.email}">${mInput.email}</a></li>
                     <li class="card-text">${mInput.officeNum}</li>
                 </div>
                 ${globFinalEng}
@@ -142,13 +140,13 @@ async function askIntern() {
 
 async function howManyIntern() {
     return inquirer.prompt(
-        [{ type: `input`, name: `numOf`, message: `How many Interns do you want to add?`, }]
+        [{ type: `input`, name: `numOf`, message: `How many Interns do you want to add? (write 0 to add none)`, }]
     );
 }
 
 async function howManyEngie() {
     return inquirer.prompt(
-        [{ type: `input`, name: `numOf`, message: `How many Engineers do you want to add?`, }]
+        [{ type: `input`, name: `numOf`, message: `How many Engineers do you want to add? (write 0 to add none)`, }]
     );
 }
 
