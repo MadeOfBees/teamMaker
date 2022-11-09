@@ -3,11 +3,14 @@
     
 ## Description: 
  Creates websites for your team 
+![2](https://user-images.githubusercontent.com/9198297/200918459-45768345-e225-4041-aa36-bd290c6480f2.jpg)
 
     
 ## Installation/Instructions: 
  Run on local machine to install 
  Type npm start then fill out the on screen instructions, an HTML will be output 
+ ![1](https://user-images.githubusercontent.com/9198297/200918630-01c4f4fd-d28e-4ce9-99c0-1ba52a8e63f4.jpg)
+
 
     
 ## Report an issue: 
