@@ -41,11 +41,12 @@ function formEng() {
     let tReturn;
     for (let i = 0; i < eInput.length; i++) {
         const mReturn = `
-        </div>
-        <h1>${eInput[i].name}</h1>
-        <li>${eInput[i].id}</li>
-        <li><a href = "${eInput[i].email}">Send Email</a></li>
-        <li><a href="url">https://github.com/${eInput[i].github}</a></li>
+        <div class="card">
+        <h3 class="card-title">${eInput[i].name}</h3>
+        <li class="card-text">Engineer</li>
+        <li class="card-text">${eInput[i].id}</li>
+        <li class="card-text"><a href = "${eInput[i].email}">Send Email</a></li>
+        <li class="card-text"><a href="url">https://github.com/${eInput[i].github}</a></li>
         </div>
         `
         if (tReturn) {
@@ -61,11 +62,12 @@ function formInt() {
     let tReturn;
     for (let i = 0; i < iInput.length; i++) {
         const mReturn = `
-        </div>
-        <h1>${iInput[i].name}</h1>
-        <li>${iInput[i].id}</li>
-        <li><a href = "${iInput[i].email}">Send Email</a></li>
-        <li>${iInput[i].school}</li>
+        <div class="card">
+        <h3 class="card-title">${iInput[i].name}</h3>
+        <li class="card-text">Intern</li>
+        <li class="card-text">${iInput[i].id}</li>
+        <li class="card-text"><a href = "${iInput[i].email}">Send Email</a></li>
+        <li class="card-text">${iInput[i].school}</li>
         </div>
         `
         if (tReturn) {
@@ -90,15 +92,17 @@ async function write() {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title></title>
+            <title>My Team</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         </head>
         <body>
             <main>
-                <div>
-                    <h1>${mInput.name}</h1>
-                    <li>${mInput.id}</li>
-                    <li><a href = "${mInput.email}">Send Email</a></li>
-                    <li>${mInput.officeNum}</li>
+                <div class="card">
+                    <h3 class="card-title">${mInput.name}</h3>
+                    <li class="card-text">Manager</li>
+                    <li class="card-text">${mInput.id}</li>
+                    <li class="card-text"><a href = "${mInput.email}">Send Email</a></li>
+                    <li class="card-text">${mInput.officeNum}</li>
                 </div>
                 ${globFinalEng}
                 ${globFinalInt}
